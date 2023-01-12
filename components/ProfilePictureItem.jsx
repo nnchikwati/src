@@ -2,7 +2,7 @@ import React from 'react';
 
 function ProfilePictureItem({imgUrl}){
     return( 
-        <div className='border-2 border-stone-700 overflow-hidden '>
+        <div className='overflow-hidden '>
         <img
             src = {imgUrl}
             //alt="portfolio"

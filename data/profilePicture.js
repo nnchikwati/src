@@ -1,5 +1,5 @@
 export default [
     {
-        imgUrl:'/assets/NigelPic.jpg',
+        imgUrl:'/assets/NigelPic2.jpg',
     }
 ]

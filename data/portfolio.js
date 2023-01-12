@@ -8,7 +8,7 @@ export default [
     {
         title: 'Geralds World',
         imgUrl:'/assets/Geralds World.png',
-        stack: ['Python'],
+        stack: ['Python', 'Pygame'],
         link: 'https'
     },
     {
@@ -38,7 +38,7 @@ export default [
     {
         title: 'Ricochet Robots(School project)',
         imgUrl:'/assets/Ricochet Robots.png',
-        stack: ['Javascript', 'Html', 'Css'],
+        stack: ['Java'],
         link: 'https'
 
     }

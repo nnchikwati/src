@@ -2,7 +2,9 @@ import React from 'react';
 
 function Footer(){
     return(
-        <div className="py-5 text-center">
+        <div
+		name="socials" 
+		className="py-5 text-center bg-gradient-to-b from-gray-400 to-white text-black dark:text-white dark:from-gray-800 dark:to-black">
 				<div className="container max-w-screen-lg mx-auto">
 					<div>
 						<div className="flex flex-wrap justify-center gap-2">
@@ -20,6 +22,7 @@ function Footer(){
 							</a>
 							<a 
 								href="https://www.linkedin.com/in/nigelchikwati/"
+								target="_blank"
 								className="bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 								<svg
 								className="w-5 h-5 fill-current"
@@ -33,7 +36,8 @@ function Footer(){
 								</svg>
 							</a>
 							<a
-								href="https://www.youtube.com/channel/UC_HFOhKtNq44QNfg78ZaKcQ"
+								href="https://www.youtube.com/channel/UCRKmviCRke5ksuZM0Fg4umw"
+								target="_blank"
 								className="bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 								<svg
 								className="w-5 h-5 fill-current"
@@ -45,6 +49,7 @@ function Footer(){
 							</a>
 							<a 
 								href="https://github.com/nnchikwati"
+								target="_blank"
 								className="bg-stone-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
 								<svg
 								xmlns="http://www.w3.org/2000/svg"

@@ -2,9 +2,13 @@ import React, { useEffect, useState } from 'react';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
-import Timeline from './components/Timeline';
 import Intro from './components/Intro';
-import ProfilePicture from './components/ProfilePicture';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import SLinks from './components/SocialLinks';
+import Tools from './components/Tools.jsx'
+import Projects from './components/Projects';
+
 
 function App() {
   const [theme, setTheme] = useState(null);
@@ -62,28 +66,55 @@ function App() {
 			/>
 		</svg>
 	);
+
+	const slides = [
+		{
+			img: '/assets/kari-shea-1SAnrIxw5OY-unsplash.jpg'
+		},
+		{
+			img: '/assets/alex-knight-2EJCSULRwC8-unsplash.jpg'
+		},
+		{
+			img: '/assets/possessed-photography-jIBMSMs4_kA-unsplash.jpg'
+		},
+		{
+			img: '/assets/yuyeung-lau-dp9Jrww_BRs-unsplash.jpg'
+		}
+	];
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const prevSlide = () => {
+	console.log(currentIndex)
+	const isFirstSlide = currentIndex === 0;
+	const newIndex = isFirstSlide ? slides.length -1 : currentIndex - 1;
+	setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+	const isLastSlide = currentIndex === slides.length - 1 ;
+	const newIndex = isLastSlide ? 0 : currentIndex + 1  ;
+	setCurrentIndex(newIndex);
+  }
   return (
     <>
-      <button
+	<Navbar/>
+	<div>
+	<button
 			type="button"
 			onClick={handleThemeSwitch}
-			className="fixed p-2 z-10 right-20 top-4 bg-violet-300 dark:bg-orange-300 text-lg p-1 rounded-md"
+			className="fixed .p-2 z-10 right-0 top-20 bg-violet-300 dark:bg-orange-300 text-lg p-1 rounded-md"
 		>
 			{theme === 'dark' ? sun : moon}
 		</button>
-    <div className="bg-white dark:bg-stone-900 text-stone-900 dark:text-stone-300 min-h-screen font-inter">
-      <div className='max-w-5xl w-11/12 mx-auto'>  
-      <Intro/>
-      <ProfilePicture/>
-      <br></br>
-      <Portfolio/>
-      <br></br>
-      <Timeline/>
-      <br></br>
-      <Contact/>
-      <Footer/>
-      </div>     
-    </div>
+	</div>
+	<Home/>
+	<Intro/>
+	<Tools/>
+	<Projects/>
+	<Contact/>
+	<SLinks/>
+    <Footer/>
     </>
   )
 }
